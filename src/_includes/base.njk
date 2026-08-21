@@ -15,7 +15,11 @@
     <div id="page-wrapper">
 
       <header id="header" class="{{ headerClass or '' }}">
-        <h1><a href="/"><img src="/images/logos/bh2-logo.png" alt="" style="height:28px;width:auto;vertical-align:middle;margin-right:6px;display:inline;" />{{ site.clubShort }}</a></h1>
+        <h1 {% if headerClass == 'alt' %}style="opacity:1;visibility:visible;"{% endif %}>
+          <a href="/" style="display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;">
+            <img src="/images/logos/bh2-logo.png" alt="" style="height:28px;width:auto;vertical-align:middle;display:inline;{% if headerClass == 'alt' %}filter:brightness(0) invert(1);{% endif %}" />{{ site.clubShort }}
+          </a>
+        </h1>
         <nav><a href="#menu">Menu</a></nav>
       </header>
 
