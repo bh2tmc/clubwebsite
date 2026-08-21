@@ -1,0 +1,69 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Club Info & Contact Details"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Club Name (full)", name: "clubName", widget: "string" }
+          - { label: "Club Short Name", name: "clubShort", widget: "string" }
+          - { label: "Club Number", name: "clubNumber", widget: "string" }
+          - { label: "Year Chartered", name: "chartered", widget: "string" }
+          - { label: "Venue", name: "venue", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Meeting Schedule", name: "meetingSchedule", widget: "string" }
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+          - { label: "Facebook URL", name: "facebook", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - { label: "Eventbrite URL", name: "eventbrite", widget: "string" }
+
+  - name: "achievements"
+    label: "Achievements Page"
+    files:
+      - name: "achievements"
+        label: "Achievements Data"
+        file: "src/_data/achievements.json"
+        fields:
+          - { label: "Club History (intro paragraph)", name: "clubHistory", widget: "text" }
+
+          - label: "Club Awards"
+            name: "clubAwards"
+            widget: "list"
+            fields:
+              - { label: "Programme Year", name: "year", widget: "string" }
+              - { label: "Award", name: "award", widget: "string" }
+              - { label: "Notes", name: "notes", widget: "string", required: false }
+
+          - label: "Past Presidents"
+            name: "presidents"
+            widget: "list"
+            fields:
+              - { label: "Term (e.g. 2026 / 2027)", name: "term", widget: "string" }
+              - { label: "Number (e.g. 29th)", name: "number", widget: "string" }
+              - { label: "President Name", name: "name", widget: "string" }
+              - { label: "Note (e.g. current, Founding President)", name: "note", widget: "string", required: false }
+
+          - label: "Area Governors (Hall of Fame)"
+            name: "areaGovernors"
+            widget: "list"
+            fields:
+              - { label: "Term", name: "term", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+
+          - label: "Contest Wins"
+            name: "contestWins"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Member", name: "member", widget: "string" }
+              - { label: "Achievement", name: "achievement", widget: "string" }

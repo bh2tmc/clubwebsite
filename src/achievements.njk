@@ -1,0 +1,106 @@
+---
+layout: base.njk
+title: What We Have Achieved
+---
+
+<section id="wrapper">
+  <header>
+    <div class="inner">
+      <h2>What We Have Achieved</h2>
+      <p>Chartered in 1998. President's Distinguished every year since. A club built on people who show up.</p>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <div class="inner">
+
+      <h3 class="major">Our Story</h3>
+      <p>{{ achievements.clubHistory }}</p>
+
+      <h3 class="major" style="margin-top:3rem;">Club Awards</h3>
+      <p>The President's Distinguished Club award is the highest level of the Toastmasters Distinguished Club Program, awarded to clubs that meet 9 of 10 annual performance goals. BH2 has achieved this award every year since founding.</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Programme Year</th><th>Award</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            {% for award in achievements.clubAwards %}
+            <tr>
+              <td>{{ award.year }}</td>
+              <td>{{ award.award }}</td>
+              <td>{{ award.notes }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="major" style="margin-top:3rem;">Notable Contest Achievements</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Year</th><th>Member</th><th>Achievement</th></tr>
+          </thead>
+          <tbody>
+            {% for win in achievements.contestWins %}
+            <tr>
+              <td>{{ win.year }}</td>
+              <td>{{ win.member }}</td>
+              <td>{{ win.achievement }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.8rem; color:rgba(255,255,255,0.45);">Note: Braddell Heights Community Club is the only CC to have permanently retained the Inter-CC Humorous Speech Trophy, won three years in a row by BH2 members.</p>
+
+      <h3 class="major" style="margin-top:3rem;">Hall of Fame: Area Governors</h3>
+      <p>BH2 members who have gone on to serve the wider Toastmasters community as Area Governors and Directors.</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Term</th><th>Member</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            {% for person in achievements.areaGovernors %}
+            <tr>
+              <td>{{ person.term }}</td>
+              <td>{{ person.name }}</td>
+              <td>{{ person.role }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="major" style="margin-top:3rem;">Past Presidents</h3>
+      <p>BH2 has been led by {{ achievements.presidents | length }} presidents since its founding in 1998. We are grateful to every one of them for their service and the culture they helped build.</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Term</th><th>President</th></tr>
+          </thead>
+          <tbody>
+            {% for p in achievements.presidents %}
+            <tr>
+              <td>{{ p.number }}</td>
+              <td>{{ p.term }}</td>
+              <td>
+                {{ p.name }}
+                {% if p.note %}<em style="color:#F2DF74;"> ({{ p.note }})</em>{% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <ul class="actions" style="margin-top:2rem;">
+        <li><a href="/join/" class="button primary">Be Part of the Next Chapter</a></li>
+        <li><a href="/experience/" class="button">See How We Meet</a></li>
+      </ul>
+
+    </div>
+  </div>
+</section>

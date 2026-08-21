@@ -1,0 +1,72 @@
+{
+  "clubHistory": "Braddell Heights II Toastmasters Club was chartered in June 1998, having evolved along with three other clubs from the original Braddell Heights Toastmasters Club (chartered in 1990, the third CC-based Toastmasters club in Singapore). In its very first year under founding President Linda Ong, BH2 achieved the World No. 5 Club ranking, the International Hall of Fame 1999 award, and the President's Distinguished Club title. BH2 has gone on to achieve the President's Distinguished Club award every year since, a record that speaks to the dedication of every officer team and member across more than two decades.",
+
+  "clubAwards": [
+    { "year": "2023 / 2024", "award": "President's Distinguished Club", "notes": "Perfect 10 Award, District 80 • Super Club Gold Award, Division G Achievers Day" },
+    { "year": "2022 / 2023", "award": "President's Distinguished Club", "notes": "" },
+    { "year": "2021 / 2022", "award": "President's Distinguished Club", "notes": "" },
+    { "year": "2020 / 2021", "award": "President's Distinguished Club", "notes": "" },
+    { "year": "2019 / 2020", "award": "President's Distinguished Club", "notes": "" },
+    { "year": "1998 / 1999", "award": "President's Distinguished Club", "notes": "International Hall of Fame 1999 • World No. 5 Club (Category)" }
+  ],
+
+  "presidents": [
+    { "term": "2026 / 2027", "number": "29th", "name": "Shavini Wickramasinghe", "note": "current" },
+    { "term": "2025 / 2026", "number": "28th", "name": "Michael Spencer", "note": "" },
+    { "term": "2024 / 2025", "number": "27th", "name": "Manikandan Chidambaram", "note": "" },
+    { "term": "2023 / 2024", "number": "26th", "name": "Uppli Srinivasan", "note": "" },
+    { "term": "2022 / 2023", "number": "25th", "name": "Anders Tay", "note": "" },
+    { "term": "2021 / 2022", "number": "24th", "name": "Lorus Loh", "note": "" },
+    { "term": "2020 / 2021", "number": "23rd", "name": "Venkatesh Narayanan", "note": "" },
+    { "term": "2019 / 2020", "number": "22nd", "name": "Lilin Quek", "note": "" },
+    { "term": "2018 / 2019", "number": "21st", "name": "Suresh Dantam", "note": "" },
+    { "term": "2017 / 2018", "number": "20th", "name": "Loshieni Ravindran & Chinna Nachiappan", "note": "" },
+    { "term": "2016 / 2017", "number": "19th", "name": "Bharath Kumar Cimbili", "note": "" },
+    { "term": "2015 / 2016", "number": "18th", "name": "Bhanu Prakash Koppuravuri", "note": "" },
+    { "term": "2014 / 2015", "number": "17th", "name": "Simon Foo Sek San", "note": "" },
+    { "term": "2013 / 2014", "number": "16th", "name": "M Chandran", "note": "" },
+    { "term": "2012 / 2013", "number": "15th", "name": "Pavani Dukka", "note": "" },
+    { "term": "2011 / 2012", "number": "14th", "name": "Lee Zhong Shun", "note": "" },
+    { "term": "2010 / 2011", "number": "13th", "name": "Cheng Chia Yi", "note": "" },
+    { "term": "2009 / 2010", "number": "12th", "name": "Leela Kalwani", "note": "" },
+    { "term": "2008 / 2009", "number": "11th", "name": "P. Renganathan", "note": "" },
+    { "term": "2007 / 2008", "number": "10th", "name": "Poon Fatt Weng", "note": "" },
+    { "term": "2006 / 2007", "number": "9th", "name": "Ang Kim Choo & Gurmit K Toor", "note": "" },
+    { "term": "2005 / 2006", "number": "8th", "name": "David Thian", "note": "" },
+    { "term": "2004 / 2005", "number": "7th", "name": "Eddie Lim & Sarangapany Ramanujalu", "note": "" },
+    { "term": "2003 / 2004", "number": "6th", "name": "Kenny Sugianto", "note": "" },
+    { "term": "2002 / 2003", "number": "5th", "name": "Roy Ong", "note": "" },
+    { "term": "2001 / 2002", "number": "4th", "name": "Alfred Wong", "note": "" },
+    { "term": "2000 / 2001", "number": "3rd", "name": "Cheng Suan Soon", "note": "" },
+    { "term": "1999 / 2000", "number": "2nd", "name": "Chan Saik Wai", "note": "" },
+    { "term": "1998 / 1999", "number": "1st", "name": "Linda Ong", "note": "Founding President" }
+  ],
+
+  "areaGovernors": [
+    { "term": "2021 / 2022", "name": "Venkatesh Narayanan", "role": "Area Governor" },
+    { "term": "2019 / 2020", "name": "Lilin Quek", "role": "S3 Area Governor" },
+    { "term": "2014 / 2015", "name": "Simon Foo Sek San", "role": "Area G2 Director" },
+    { "term": "2011 / 2012", "name": "Linda Ong", "role": "S3 Area Governor" },
+    { "term": "2010 / 2011", "name": "Leela Kalwani", "role": "Area S3 Governor" }
+  ],
+
+  "contestWins": [
+    { "year": "2019 / 2020", "member": "Lorus Loh", "achievement": "Champion, Division G Humorous Speech Contest" },
+    { "year": "2018 / 2019", "member": "Loshieni Ravindran", "achievement": "1st Runner Up, District Table Topics Contest" },
+    { "year": "2007 / 2008", "member": "Cheng Chia Yi", "achievement": "2nd Runner Up, People's Association Humorous Speech Challenge Trophy" },
+    { "year": "2006 / 2007", "member": "Cheng Chia Yi", "achievement": "2nd Runner Up, District Humorous Speech Contest" },
+    { "year": "2005 / 2006", "member": "Benjamin Cheng", "achievement": "Champion, District Table Topics Contest" },
+    { "year": "2005 / 2006", "member": "Benjamin Cheng", "achievement": "Champion, District Humorous Speech Contest" },
+    { "year": "2005 / 2006", "member": "Benjamin Cheng", "achievement": "2nd Runner Up, People's Association Humorous Speech Challenge Trophy" },
+    { "year": "2005 / 2006", "member": "Ang Soh Hwa", "achievement": "2nd Runner Up, District Mandarin Humorous Speech Contest" },
+    { "year": "2004 / 2005", "member": "Benjamin Cheng", "achievement": "Champion, District Humorous Speech Contest" },
+    { "year": "2004 / 2005", "member": "Roy Ong", "achievement": "2nd Runner Up, Combined District (51 & 80) Mandarin International Speech Contest" },
+    { "year": "2004 / 2005", "member": "Roy Ong", "achievement": "1st Runner Up, Combined District (51 & 80) Mandarin Humorous Speech Contest" },
+    { "year": "2001 / 2002", "member": "Cheng Suan Soon", "achievement": "1st Runner Up, District Humorous Speech Contest" },
+    { "year": "2001 / 2002", "member": "Cheng Suan Soon", "achievement": "Champion, Inter-CC Humorous Speech Contest" },
+    { "year": "2000 / 2001", "member": "Gea Ban Peng", "achievement": "Champion, Inter-CC Humorous Speech Contest" },
+    { "year": "2000 / 2001", "member": "Gea Ban Peng", "achievement": "1st Runner Up, District Humorous Speech Contest" },
+    { "year": "1999 / 2000", "member": "Lim Li Li", "achievement": "Champion (first ever), District 51 Evaluation Contest" },
+    { "year": "1999 / 2000", "member": "Cheng Suan Soon", "achievement": "Champion, Inter-CC Humorous Speech Contest" }
+  ]
+}

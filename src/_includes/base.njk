@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ title }} | {{ site.clubShort }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="{{ description or 'Braddell Heights II Toastmasters Club — Singapore community public speaking club.' }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+
+      <header id="header" class="{{ headerClass or '' }}">
+        <h1><a href="/">{{ site.clubShort }}</a></h1>
+        <nav><a href="#menu">Menu</a></nav>
+      </header>
+
+      <nav id="menu">
+        <div class="inner">
+          <h2>Menu</h2>
+          <ul class="links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/what-is-toastmasters/">What is Toastmasters?</a></li>
+            <li><a href="/experience/">The BH2 Experience</a></li>
+            <li><a href="/achievements/">What We Have Achieved</a></li>
+            <li><a href="/join/">Join Us</a></li>
+          </ul>
+          <a href="#" class="close">Close</a>
+        </div>
+      </nav>
+
+      {{ content | safe }}
+
+      <section id="footer">
+        <div class="inner">
+          {% block footerContent %}
+          <ul class="contact">
+            <li class="icon solid fa-home">{{ site.venue }}<br />{{ site.address }}</li>
+            <li class="icon solid fa-calendar">{{ site.meetingSchedule }}</li>
+            <li class="icon solid fa-envelope"><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            <li class="icon brands fa-instagram"><a href="{{ site.instagram }}" target="_blank">Instagram</a></li>
+            <li class="icon brands fa-facebook-f"><a href="{{ site.facebook }}" target="_blank">Facebook</a></li>
+            <li class="icon brands fa-linkedin"><a href="{{ site.linkedin }}" target="_blank">LinkedIn</a></li>
+          </ul>
+          {% endblock %}
+          <ul class="copyright">
+            <li>&copy; {{ site.clubName }}. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+          <p style="font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:1rem;">The information on this website is for the sole use of Toastmasters' members, for Toastmasters business only. It is not to be used for solicitation and distribution of non-Toastmasters material or information.</p>
+        </div>
+      </section>
+
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.scrollex.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

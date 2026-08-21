@@ -1,0 +1,49 @@
+---
+layout: base.njk
+title: Join Us
+---
+
+<section id="wrapper">
+  <header>
+    <div class="inner">
+      <h2>Join Us</h2>
+      <p>Come as a guest first. No registration, no commitment, just show up.</p>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="inner">
+      <h3 class="major">Step 1: Come as a guest</h3>
+      <p>The easiest way to experience BH2 is to walk in to one of our regular meetings. Guests are always welcome with no need to register in advance and no pressure to speak. Just turn up, take a seat, and see what we are about.</p>
+      <div class="box" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:2rem;border-radius:4px;margin:2rem 0;">
+        <h4 style="color:#F2DF74;margin-bottom:1rem;">When and where we meet</h4>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="margin-bottom:0.75rem;"><strong>Schedule:</strong> {{ site.meetingSchedule }}</li>
+          <li style="margin-bottom:0.75rem;"><strong>Venue:</strong> {{ site.venue }}</li>
+          <li><strong>Address:</strong> {{ site.address }}</li>
+        </ul>
+      </div>
+      <h3 class="major">Step 2: Register on Eventbrite (optional)</h3>
+      <p>We list our upcoming meetings on Eventbrite so you can plan ahead. Registration is free and helps us know how many guests to expect.</p>
+      <ul class="actions">
+        <li><a href="{{ site.eventbrite }}" target="_blank" class="button primary">View Upcoming Meetings on Eventbrite</a></li>
+      </ul>
+      <h3 class="major">Step 3: Become a member</h3>
+      <p>If BH2 feels like the right fit, joining is straightforward. Membership is paid directly through Toastmasters International and renewed every 6 months.</p>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Fee</th><th>Amount</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>New member registration</td><td>USD 20 (one-time)</td><td>Paid to Toastmasters International</td></tr>
+            <tr><td>Membership dues</td><td>USD 45 per 6 months</td><td>Covers April to September or October to March</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="major">Get in touch</h3>
+      <ul class="contact">
+        <li class="icon solid fa-envelope"><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li class="icon brands fa-instagram"><a href="{{ site.instagram }}" target="_blank">Instagram</a></li>
+        <li class="icon brands fa-facebook-f"><a href="{{ site.facebook }}" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
