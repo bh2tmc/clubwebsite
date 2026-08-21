@@ -15,7 +15,12 @@
     <div id="page-wrapper">
 
       <header id="header" class="{{ headerClass or '' }}">
-        <h1><a href="/">{{ site.clubShort }}</a></h1>
+        <h1>
+          <a href="/" style="display:inline-flex;align-items:center;gap:0.6rem;text-decoration:none;">
+            <img src="/images/logos/bh2-logo.png" alt="BH2 Toastmasters" style="height:2.2rem;width:auto;vertical-align:middle;" />
+            <span>{{ site.clubShort }}</span>
+          </a>
+        </h1>
         <nav><a href="#menu">Menu</a></nav>
       </header>
 
@@ -47,6 +52,10 @@
             <li class="icon brands fa-linkedin"><a href="{{ site.linkedin }}" target="_blank">LinkedIn</a></li>
           </ul>
           {% endblock %}
+          <div style="display:flex;align-items:center;gap:1.5rem;margin:1.5rem 0 1rem;">
+            <img src="/images/logos/tm-international-logo.png" alt="Toastmasters International" style="height:3rem;width:auto;opacity:0.8;" />
+            <img src="/images/logos/bh2-logo.png" alt="Braddell Heights II Toastmasters" style="height:3rem;width:auto;opacity:0.8;" />
+          </div>
           <ul class="copyright">
             <li>&copy; {{ site.clubName }}. All rights reserved.</li>
             <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
