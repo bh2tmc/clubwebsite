@@ -1,0 +1,168 @@
+---
+layout: base.njk
+title: Gallery
+---
+
+<style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.gallery-grid img:hover { opacity: 0.85; }
+
+.gallery-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.gallery-lightbox.open { display: flex; }
+.gallery-lightbox img {
+  max-width: 90vw;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.gallery-lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  line-height: 1;
+  background: none;
+  border: none;
+}
+.gallery-lightbox-nav {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.2rem;
+}
+.gallery-lightbox-nav button {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+.gallery-lightbox-nav button:hover { background: rgba(255,255,255,0.22); }
+.gallery-section-label {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  margin: 2.5rem 0 0.5rem;
+}
+</style>
+
+<section id="wrapper">
+  <header>
+    <div class="inner">
+      <h2>Gallery</h2>
+      <p>Life at BH II Toastmasters — meetings, contests, and the moments in between.</p>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="inner">
+
+      <h3 class="major">At Our Meetings</h3>
+      <p>A look inside a regular BH II meeting — members on stage, in the audience, and growing together.</p>
+      <div class="gallery-grid" id="gallery-meeting">
+        <img src="/images/gallery/meeting/meeting-1.jpg" alt="BH II Toastmasters meeting" loading="lazy" />
+        <img src="/images/gallery/meeting/meeting-2.jpg" alt="BH II Toastmasters meeting" loading="lazy" />
+        <img src="/images/gallery/meeting/meeting-3.jpg" alt="BH II Toastmasters meeting" loading="lazy" />
+        <img src="/images/gallery/meeting/meeting-4.jpg" alt="BH II Toastmasters meeting" loading="lazy" />
+        <img src="/images/gallery/meeting/meeting-5.jpg" alt="BH II Toastmasters meeting" loading="lazy" />
+        <img src="/images/gallery/meeting/meeting-6.jpg" alt="BH II Toastmasters meeting" loading="lazy" />
+        <img src="/images/gallery/meeting/meeting-7.jpg" alt="BH II Toastmasters meeting" loading="lazy" />
+      </div>
+
+      <h3 class="major">Contests and Recognition</h3>
+      <p>Members representing BH II at area and division contests, and award moments from our regular meetings.</p>
+      <div class="gallery-grid" id="gallery-awards">
+        <img src="/images/gallery/external-events/event-1.jpg" alt="BH II members at a contest or event" loading="lazy" />
+        <img src="/images/gallery/external-events/event-2.jpg" alt="BH II members at a contest or event" loading="lazy" />
+        <img src="/images/gallery/external-events/event-3.jpg" alt="BH II members at a contest or event" loading="lazy" />
+        <img src="/images/gallery/external-events/event-4.jpg" alt="BH II members at a contest or event" loading="lazy" />
+        <img src="/images/gallery/external-events/event-5.jpg" alt="BH II members at a contest or event" loading="lazy" />
+      </div>
+
+      <h3 class="major">ExCo and Club Milestones</h3>
+      <div class="gallery-grid" id="gallery-exco">
+        <img src="/images/gallery/exco/exco-1.jpg" alt="BH II ExCo installation" loading="lazy" />
+      </div>
+
+      <div style="margin-top:3rem; padding:1.5rem; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:4px; text-align:center;">
+        <p style="margin:0; opacity:0.65; font-size:0.9rem;">More photos to come. Follow us on <a href="{{ site.instagram }}" target="_blank" style="color:#F2DF74;">Instagram</a> for the latest from our meetings.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="gallery-lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="gallery-lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="" />
+  <div class="gallery-lightbox-nav">
+    <button id="lightbox-prev">&#8592; Prev</button>
+    <button id="lightbox-next">Next &#8594;</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  var images = Array.from(document.querySelectorAll('.gallery-grid img'));
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  var current = 0;
+
+  function open(idx) {
+    current = idx;
+    lbImg.src = images[idx].src;
+    lbImg.alt = images[idx].alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function prev() { open((current - 1 + images.length) % images.length); }
+  function next() { open((current + 1) % images.length); }
+
+  images.forEach(function(img, i) {
+    img.addEventListener('click', function() { open(i); });
+  });
+  document.getElementById('lightbox-close').addEventListener('click', close);
+  document.getElementById('lightbox-prev').addEventListener('click', prev);
+  document.getElementById('lightbox-next').addEventListener('click', next);
+  lb.addEventListener('click', function(e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function(e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+})();
+</script>

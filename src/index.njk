@@ -16,7 +16,8 @@ headerClass: alt
     <h2 style="border-bottom:none; padding-bottom:0; margin-bottom:0.6em;">Braddell Heights II Toastmasters</h2>
     <div style="width:60px; height:3px; background:#772432; margin:0 0 1.4em;"></div>
     <p style="text-transform:none; font-size:1.1em; margin-bottom:0.4em;">Where great speakers are made. Join us every fortnight in Singapore.</p>
-    <p style="text-transform:none; font-size:0.72em; letter-spacing:0.12em; opacity:0.55; margin-top:0; margin-bottom:2.2rem;">CLUB {{ site.clubNumber }} &bull; CHARTERED {{ site.chartered }} &bull; BRADDELL HEIGHTS COMMUNITY CENTRE</p>
+    <p style="text-transform:none; font-size:0.72em; letter-spacing:0.12em; opacity:0.55; margin-top:0; margin-bottom:0.6rem;">CLUB {{ site.clubNumber }} &bull; CHARTERED {{ site.chartered }} &bull; BRADDELL HEIGHTS COMMUNITY CENTRE</p>
+    <p id="next-meeting-pill" style="text-transform:none; font-size:0.72em; letter-spacing:0.10em; opacity:0.85; margin-top:0; margin-bottom:2.2rem; color:#F2DF74;"></p>
     <ul class="actions" style="justify-content:flex-start;">
       <li><a href="/join/" class="button primary">Come as a Guest</a></li>
       <li><a href="/what-is-toastmasters/" class="button" style="border:2px solid rgba(255,255,255,0.75); background:rgba(255,255,255,0.08); color:#ffffff;">Learn More</a></li>
@@ -25,6 +26,47 @@ headerClass: alt
   <div style="position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); text-align:center; animation:scrollBounce 1.8s ease-in-out infinite; color:rgba(255,255,255,0.55); font-family:Montserrat,sans-serif; font-size:0.65em; letter-spacing:0.18em; pointer-events:none;">
     <div>SEE A MEETING</div>
     <div style="font-size:1.6em; margin-top:0.15em; line-height:1;">↓</div>
+  </div>
+</section>
+
+<script>
+(function() {
+  function nextMeeting() {
+    var now = new Date();
+    var d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    if (d.getDay() === 6 && now.getHours() >= 17) { d.setDate(d.getDate() + 1); }
+    var daysUntilSat = (6 - d.getDay() + 7) % 7;
+    d.setDate(d.getDate() + daysUntilSat);
+    for (var i = 0; i < 6; i++) {
+      var week = Math.ceil(d.getDate() / 7);
+      if (week === 2 || week === 4) return d;
+      d.setDate(d.getDate() + 7);
+    }
+    return d;
+  }
+  var d = nextMeeting();
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var el = document.getElementById('next-meeting-pill');
+  if (el) el.textContent = '▶ Next meeting: Sat ' + d.getDate() + ' ' + months[d.getMonth()] + ', 1:45 pm';
+})();
+</script>
+
+<section id="stat-strip" style="background:#004165; padding:2rem 8%; display:flex; flex-wrap:wrap; gap:0.5rem 3rem; align-items:center;">
+  <div style="text-align:center; min-width:120px;">
+    <div style="font-family:Montserrat,sans-serif; font-size:2rem; font-weight:700; color:#F2DF74; line-height:1;">27+</div>
+    <div style="font-size:0.7rem; letter-spacing:0.12em; color:rgba(255,255,255,0.65); margin-top:0.3rem;">YEARS RUNNING</div>
+  </div>
+  <div style="text-align:center; min-width:160px;">
+    <div style="font-family:Montserrat,sans-serif; font-size:2rem; font-weight:700; color:#F2DF74; line-height:1;">Every year</div>
+    <div style="font-size:0.7rem; letter-spacing:0.12em; color:rgba(255,255,255,0.65); margin-top:0.3rem;">PRESIDENT'S DISTINGUISHED</div>
+  </div>
+  <div style="text-align:center; min-width:120px;">
+    <div style="font-family:Montserrat,sans-serif; font-size:2rem; font-weight:700; color:#F2DF74; line-height:1;">29</div>
+    <div style="font-size:0.7rem; letter-spacing:0.12em; color:rgba(255,255,255,0.65); margin-top:0.3rem;">CLUB PRESIDENTS</div>
+  </div>
+  <div style="text-align:center; min-width:140px;">
+    <div style="font-family:Montserrat,sans-serif; font-size:2rem; font-weight:700; color:#F2DF74; line-height:1;">World No. 5</div>
+    <div style="font-size:0.7rem; letter-spacing:0.12em; color:rgba(255,255,255,0.65); margin-top:0.3rem;">CLUB RANKING, 1999</div>
   </div>
 </section>
 
