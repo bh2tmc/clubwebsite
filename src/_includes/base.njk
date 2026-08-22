@@ -15,11 +15,13 @@
     <div id="page-wrapper">
 
       <header id="header" class="{{ headerClass or '' }}">
-        <h1 {% if headerClass == 'alt' %}style="opacity:1;visibility:visible;"{% endif %}>
+        {% if headerClass != 'alt' %}
+        <h1>
           <a href="/" style="display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;">
-            <img src="/images/logos/bh2-logo.png" alt="" style="height:28px;width:auto;vertical-align:middle;display:inline;{% if headerClass == 'alt' %}filter:brightness(0) invert(1);{% endif %}" />{{ site.clubShort }}
+            <img src="/images/logos/bh2-logo.png" alt="" style="height:28px;width:auto;vertical-align:middle;display:inline;" />{{ site.clubShort }}
           </a>
         </h1>
+        {% endif %}
         <nav><a href="#menu">Menu</a></nav>
       </header>
 
@@ -54,7 +56,7 @@
           {% endblock %}
           <div style="display:flex;align-items:center;gap:1.5rem;margin:1.5rem 0 1rem;">
             <img src="/images/logos/tm-international-logo.png" alt="Toastmasters International" style="height:3.9rem;width:auto;opacity:0.8;" />
-            <img src="/images/logos/bh2-logo.png" alt="Braddell Heights II Toastmasters" style="height:3.9rem;width:auto;opacity:0.8;" />
+            <img src="/images/logos/bh2-logo.png" alt="Braddell Heights II Toastmasters" style="height:5.1rem;width:auto;opacity:0.8;" />
           </div>
           <ul class="copyright">
             <li>&copy; {{ site.clubName }}. All rights reserved.</li>

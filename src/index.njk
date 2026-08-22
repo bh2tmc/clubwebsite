@@ -13,7 +13,7 @@ headerClass: alt
 
 <section id="banner" style="background-image: linear-gradient(to right, rgba(15,20,35,0.90) 0%, rgba(15,20,35,0.90) 44%, rgba(15,20,35,0.28) 100%), url('/images/meeting-wide.jpg'); background-size: cover; background-position: center top; min-height: 100vh; display: flex; align-items: center; justify-content: flex-start; padding: 5em 0 5em 8%; position: relative;">
   <div class="inner" style="text-align:left; margin:0; max-width:36em; width:100%;">
-    <h2 style="border-bottom:none; padding-bottom:0; margin-bottom:0.6em;">Braddell Heights II Toastmasters</h2>
+    <h2 style="border-bottom:none; padding-bottom:0; margin-bottom:0.6em; font-size:2.5em;">Braddell Heights II Toastmasters</h2>
     <div style="width:60px; height:3px; background:#772432; margin:0 0 1.4em;"></div>
     <p style="text-transform:none; font-size:1.1em; margin-bottom:0.4em;">Where great speakers are made. Join us every fortnight in Singapore.</p>
     <p style="text-transform:none; font-size:0.72em; letter-spacing:0.12em; opacity:0.55; margin-top:0; margin-bottom:0.6rem;">CLUB {{ site.clubNumber }} &bull; CHARTERED {{ site.chartered }} &bull; BRADDELL HEIGHTS COMMUNITY CENTRE</p>
@@ -44,10 +44,51 @@ headerClass: alt
     }
     return d;
   }
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function generateICS(d) {
+    var dateStr = d.getFullYear() + '' + pad(d.getMonth() + 1) + '' + pad(d.getDate());
+    return [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//BH II Toastmasters//bh2tmc.pages.dev//EN',
+      'BEGIN:VEVENT',
+      'DTSTART:' + dateStr + 'T054500Z',
+      'DTEND:' + dateStr + 'T083000Z',
+      'SUMMARY:BH II Toastmasters Meeting',
+      'DESCRIPTION:You are warmly invited to join us as a guest. No registration needed\, no pressure to speak. Just turn up and see what we are about.\n\nhttps://bh2tmc.pages.dev/join/',
+      'LOCATION:Braddell Heights Community Centre\, Level 3\, Classroom 4 (#03-12)\, 1 Braddell Rise\, Singapore 579716',
+      'URL:https://bh2tmc.pages.dev/join/',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+  }
+
+  function downloadICS(d) {
+    var blob = new Blob([generateICS(d)], { type: 'text/calendar;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'bh2-toastmasters-meeting.ics';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
   var d = nextMeeting();
   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var el = document.getElementById('next-meeting-pill');
-  if (el) el.textContent = '▶ Next meeting: Sat ' + d.getDate() + ' ' + months[d.getMonth()] + ', 1:45 pm';
+  if (el) {
+    el.innerHTML =
+      '▶ Next meeting: Sat ' + d.getDate() + ' ' + months[d.getMonth()] + ', 1:45 pm' +
+      '  <a href="#" id="add-to-cal" style="color:#F2DF74;font-size:0.9em;opacity:0.8;text-decoration:underline;letter-spacing:0.06em;">+ Add to calendar</a>';
+    document.getElementById('add-to-cal').addEventListener('click', function(e) {
+      e.preventDefault();
+      downloadICS(d);
+    });
+  }
 })();
 </script>
 
