@@ -1,13 +1,73 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>{{ title }} | {{ site.clubShort }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="{{ description or 'Braddell Heights II Toastmasters Club — Singapore community public speaking club.' }}" />
+    <meta name="description" content="{{ description or 'Braddell Heights II Toastmasters — Singapore public speaking and leadership club since 1998. Overcome stage fright, speak confidently, and grow as a leader.' }}" />
+    <link rel="canonical" href="https://bh2tmc.pages.dev{{ page.url }}" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ site.clubName }}" />
+    <meta property="og:title" content="{{ title }} | {{ site.clubShort }}" />
+    <meta property="og:description" content="{{ description or 'Braddell Heights II Toastmasters — Singapore public speaking and leadership club since 1998. Overcome stage fright, speak confidently, and grow as a leader.' }}" />
+    <meta property="og:url" content="https://bh2tmc.pages.dev{{ page.url }}" />
+    <meta property="og:image" content="https://bh2tmc.pages.dev/images/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title }} | {{ site.clubShort }}" />
+    <meta name="twitter:description" content="{{ description or 'Braddell Heights II Toastmasters — Singapore public speaking and leadership club since 1998. Overcome stage fright, speak confidently, and grow as a leader.' }}" />
+    <meta name="twitter:image" content="https://bh2tmc.pages.dev/images/og-cover.jpg" />
+
+    <!-- LocalBusiness structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Braddell Heights II Toastmasters Club",
+      "alternateName": ["BH II Toastmasters", "BH2 Toastmasters"],
+      "url": "https://bh2tmc.pages.dev",
+      "logo": "https://bh2tmc.pages.dev/images/logos/bh2-logo.png",
+      "image": "https://bh2tmc.pages.dev/images/og-cover.jpg",
+      "description": "Award-winning Singapore public speaking and leadership club since 1998. Overcome stage fright, speak confidently, and develop leadership skills through our fortnightly Toastmasters meetings.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Braddell Rise, Level 3, Classroom 4 (#03-12)",
+        "addressLocality": "Singapore",
+        "postalCode": "579716",
+        "addressCountry": "SG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 1.3474,
+        "longitude": 103.8707
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "13:45",
+        "closes": "16:30"
+      },
+      "email": "bh2tmc@gmail.com",
+      "foundingDate": "1998",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Toastmasters International",
+        "url": "https://www.toastmasters.org"
+      },
+      "sameAs": [
+        "https://www.instagram.com/braddellheightsii/",
+        "https://www.facebook.com/braddellheightsII",
+        "https://www.linkedin.com/in/braddell-heights-ii-toastmasters-club/"
+      ],
+      "keywords": "toastmasters singapore, public speaking singapore, overcome stage fright, speak confidently, leadership workshop singapore, communication skills singapore"
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" /></noscript>
     <link rel="stylesheet" href="/assets/css/main.css" />
     <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
   </head>
