@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "start": "node --env-file=.env node_modules/.bin/eleventy --serve"
   },
   "keywords": [],
   "author": "",
