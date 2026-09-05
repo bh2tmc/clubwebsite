@@ -21,8 +21,8 @@ async function fetchSheet(sheetName) {
   );
 }
 
-function camel(str) {
-  return str.charAt(0).toLowerCase() + str.slice(1).replace(/\s+(\w)/g, (_, c) => c.toUpperCase());
+function sortByYear(arr, key) {
+  return arr.slice().sort((a, b) => parseInt(b[key]) - parseInt(a[key]));
 }
 
 module.exports = async function() {
@@ -39,10 +39,11 @@ module.exports = async function() {
   }
 
   return {
-    clubAwards: clubAwards.map(r => ({ year: r.Year, award: r.Award, notes: r.Notes })),
-    presidents:  presidents.map(r => ({ term: r.Term, number: r.Number, name: r.Name, note: r.Note })),
-    contestWins: contestWins.map(r => ({ year: r.Year, member: r.Member, achievement: r.Achievement })),
-    areaGovernors: areaGovernors.map(r => ({ term: r.Term, name: r.Name, role: r.Role })),
+    clubAwards: sortByYear(clubAwards.map(r => ({ year: r.Year, award: r.Award, notes: r.Notes })), 'year'),
+    presidents: presidents.map(r => ({ term: r.Term, number: r.Number, name: r.Name, note: r.Note }))
+      .sort((a, b) => parseInt(b.number) - parseInt(a.number)),
+    contestWins: sortByYear(contestWins.map(r => ({ year: r.Year, member: r.Member, achievement: r.Achievement })), 'year'),
+    areaGovernors: sortByYear(areaGovernors.map(r => ({ term: r.Term, name: r.Name, role: r.Role })), 'term'),
     clubHistory: "Braddell Heights II Toastmasters Club was chartered in June 1998, having evolved along with three other clubs from the original Braddell Heights Toastmasters Club (chartered in 1990, the third CC-based Toastmasters club in Singapore). In its very first year under founding President Linda Ong, BH II achieved the World No. 5 Club ranking, the International Hall of Fame 1999 award, and the President's Distinguished Club title. BH II has gone on to achieve the President's Distinguished Club award every year since, a record that speaks to the dedication of every officer team and member across more than two decades."
   };
 };
