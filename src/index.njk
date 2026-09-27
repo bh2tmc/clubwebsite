@@ -55,11 +55,11 @@ description: "Join Braddell Heights II Toastmasters, Singapore's award-winning p
       'VERSION:2.0',
       'PRODID:-//BH II Toastmasters//bh2tmc.pages.dev//EN',
       'BEGIN:VEVENT',
-      'DTSTART:' + dateStr + 'T054500Z',
-      'DTEND:' + dateStr + 'T083000Z',
+      'DTSTART:' + dateStr + 'T063000Z',
+      'DTEND:' + dateStr + 'T091500Z',
       'SUMMARY:BH II Toastmasters Meeting',
       'DESCRIPTION:You are warmly invited to join us as a guest. No registration needed\, no pressure to speak. Just turn up and see what we are about.\n\nhttps://bh2tmc.pages.dev/join/',
-      'LOCATION:Braddell Heights Community Centre\, Level 3\, Classroom 4 (#03-12)\, 1 Braddell Rise\, Singapore 579716',
+      'LOCATION:Braddell Heights Community Centre\, Level 3\, Classroom 11 (#03-11)\, 1 Braddell Rise\, Singapore 579716',
       'URL:https://bh2tmc.pages.dev/join/',
       'END:VEVENT',
       'END:VCALENDAR'
@@ -83,7 +83,7 @@ description: "Join Braddell Heights II Toastmasters, Singapore's award-winning p
   var el = document.getElementById('next-meeting-pill');
   if (el) {
     el.innerHTML =
-      '▶ Next meeting: Sat ' + d.getDate() + ' ' + months[d.getMonth()] + ', 1:45 pm' +
+      '▶ Next meeting: Sat ' + d.getDate() + ' ' + months[d.getMonth()] + ', 2:30 pm' +
       '  <a href="#" id="add-to-cal" style="color:#ffffff;font-size:1em;font-weight:700;opacity:1;text-decoration:underline;letter-spacing:0.06em;">+ Add to calendar</a>';
     document.getElementById('add-to-cal').addEventListener('click', function(e) {
       e.preventDefault();
@@ -141,7 +141,7 @@ description: "Join Braddell Heights II Toastmasters, Singapore's award-winning p
       <a href="/join/" class="image"><img src="/images/meeting-wide.jpg" alt="BH II Toastmasters meeting room" /></a>
       <div class="content">
         <h2 class="major">Come see us. No commitment required.</h2>
-        <p>We meet on the 2nd and 4th Saturday of every month, 1:45pm to 4:30pm, at {{ site.venue }}. Guests are always welcome. Walk in, take a seat, and experience Toastmasters for yourself.</p>
+        <p>We meet on the 2nd and 4th Saturday of every month, 2:45pm to 5:15pm, at {{ site.venue }}. Guests are always welcome. Walk in, take a seat, and experience Toastmasters for yourself.</p>
         <a href="/join/" class="special">Find out when we meet next</a>
       </div>
     </div>
