@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Pathways Evaluation Forms | BH2 Toastmasters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="robots" content="noindex, nofollow" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Page-specific overrides */
+			#search-section {
+				padding: 4rem 2rem 2rem;
+				max-width: 860px;
+				margin: 0 auto;
+			}
+			.search-bar {
+				display: flex;
+				gap: 0.75rem;
+				margin-bottom: 1.25rem;
+				flex-wrap: wrap;
+			}
+			.search-bar input[type="text"] {
+				flex: 1;
+				min-width: 220px;
+				padding: 0.7rem 1rem;
+				font-size: 1rem;
+				border-radius: 4px;
+				border: 1px solid rgba(255,255,255,0.15);
+				background: rgba(255,255,255,0.05);
+				color: #fff;
+			}
+			.search-bar input[type="text"]::placeholder { color: rgba(255,255,255,0.4); }
+			.search-bar select {
+				padding: 0.7rem 0.9rem;
+				font-size: 0.9rem;
+				border-radius: 4px;
+				border: 1px solid rgba(255,255,255,0.15);
+				background: rgba(255,255,255,0.05);
+				color: #ccc;
+				cursor: pointer;
+			}
+			.search-bar select option { background: #1b2838; color: #fff; }
+			#results { margin-top: 1.5rem; }
+			.result-card {
+				background: rgba(255,255,255,0.04);
+				border: 1px solid rgba(255,255,255,0.08);
+				border-radius: 6px;
+				padding: 1.1rem 1.4rem;
+				margin-bottom: 0.9rem;
+				transition: border-color 0.2s;
+			}
+			.result-card:hover { border-color: rgba(255,255,255,0.2); }
+			.result-card h3 {
+				margin: 0 0 0.35rem;
+				font-size: 1.05rem;
+				color: #fff;
+			}
+			.result-meta {
+				font-size: 0.82rem;
+				color: rgba(255,255,255,0.45);
+				margin-bottom: 0.75rem;
+			}
+			.result-meta .tag {
+				display: inline-block;
+				background: rgba(255,255,255,0.08);
+				border-radius: 3px;
+				padding: 0.1rem 0.5rem;
+				margin-right: 0.4rem;
+			}
+			.form-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+			.form-links a {
+				display: inline-block;
+				padding: 0.45rem 1rem;
+				border-radius: 4px;
+				background: #3d7ab5;
+				color: #fff !important;
+				font-size: 0.85rem;
+				text-decoration: none;
+				transition: background 0.2s;
+			}
+			.form-links a:hover { background: #2e5f8e; }
+			.note {
+				font-size: 0.8rem;
+				color: rgba(255,255,255,0.4);
+				margin-top: 0.5rem;
+				font-style: italic;
+			}
+			#no-results {
+				color: rgba(255,255,255,0.45);
+				font-style: italic;
+				margin-top: 1rem;
+				display: none;
+			}
+			#result-count {
+				font-size: 0.85rem;
+				color: rgba(255,255,255,0.4);
+				margin-bottom: 0.5rem;
+			}
+			.page-header-block {
+				padding: 3rem 2rem 0;
+				max-width: 860px;
+				margin: 0 auto;
+			}
+			.page-header-block h2 { margin-bottom: 0.4rem; }
+			.page-header-block p { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin: 0; }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<div id="page-wrapper">
+
+			<header id="header">
+				<h1><a href="index.html">BH2 Toastmasters</a></h1>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+			<nav id="menu">
+				<div class="inner">
+					<h2>Menu</h2>
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="what-is-toastmasters.html">What is Toastmasters?</a></li>
+						<li><a href="experience.html">The BH2 Experience</a></li>
+						<li><a href="achievements.html">What We Have Achieved</a></li>
+						<li><a href="join.html">Join Us</a></li>
+					</ul>
+					<a href="#" class="close">Close</a>
+				</div>
+			</nav>
+
+			<section id="wrapper">
+
+				<header>
+					<div class="inner">
+						<h2>Pathways Evaluation Forms</h2>
+						<p>Find and download the official TM evaluation form for any Pathways project.</p>
+					</div>
+				</header>
+
+				<div id="search-section">
+					<div class="search-bar">
+						<input type="text" id="query" placeholder="Search project name, e.g. Persuasive Speaking…" autocomplete="off" />
+						<select id="filter-pathway">
+							<option value="">All pathways</option>
+							<option value="DL">Dynamic Leadership</option>
+							<option value="EH">Engaging Humor</option>
+							<option value="MS">Motivational Strategies</option>
+							<option value="PI">Persuasive Influence</option>
+							<option value="PM">Presentation Mastery</option>
+							<option value="VC">Visionary Communication</option>
+							<option value="EC">Effective Coaching (legacy)</option>
+							<option value="IP">Innovative Planning (legacy)</option>
+							<option value="LD">Leadership Development (legacy)</option>
+							<option value="SR">Strategic Relationships (legacy)</option>
+							<option value="TC">Team Collaboration (legacy)</option>
+							<option value="elective">Electives</option>
+						</select>
+						<select id="filter-level">
+							<option value="">All levels</option>
+							<option value="1">Level 1</option>
+							<option value="2">Level 2</option>
+							<option value="3">Level 3</option>
+							<option value="4">Level 4</option>
+							<option value="5">Level 5</option>
+							<option value="elective">Elective</option>
+						</select>
+					</div>
+
+					<div id="result-count"></div>
+					<div id="results"></div>
+					<div id="no-results">No matching projects found. Try a shorter keyword.</div>
+				</div>
+
+			</section>
+
+			<footer id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>&copy; BH2 Toastmasters Club 7511</li>
+						<li>Internal tool &mdash; for club use only</li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+		const INDEX = {"projects":{"Ice Breaker":{"level":1,"pathways":["ALL"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8101e-evaluation-resource.pdf"},"Writing a Speech with Purpose":{"level":1,"pathways":["ALL"],"url":"https://content.toastmasters.org/image/upload/8103E-evaluation-resource-ff.pdf"},"Introduction to Vocal Variety and Body Language":{"level":1,"pathways":["ALL"],"multi_speech":true,"urls":{"evaluation_form":"https://content.toastmasters.org/image/upload/v1741989017/8104E1-evaluation-resource-ff.pdf","speech_profile":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8104e2-speech-profile-ff.pdf"},"notes":"Two resources: evaluation form for first speech, speech profile for vocal variety assessment"},"Evaluation and Feedback":{"level":1,"pathways":["ALL"],"multi_speech":true,"urls":{"first_speech":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8100e1-evaluation-resource-first-speech.pdf","second_speech":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8100e2-evaluation-resource-second-speech.pdf","evaluator_speech":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8100e3-evaluation-resource-evaluator-speech.pdf"},"notes":"Three forms: (1) First speech, (2) Second speech, (3) Evaluator speech — the member evaluates someone else"},"Understanding Your Communication Style":{"level":2,"pathways":["DL","MS","PM","VC","EC"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8206e-evaluation-resource-ffe.pdf"},"Understanding Your Leadership Style":{"level":2,"pathways":["DL","PI","VC","EC","IP","LD","SR","TC"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8207e-evaluation-resource-ffe.pdf"},"Know Your Sense of Humor":{"level":2,"pathways":["EH"],"url":"https://www.toastmasters.org/resources/-/media/AE85794F189346BC9799C741779E2DE3.ashx"},"Connect with Your Audience":{"level":2,"pathways":["EH","IP"],"url":"https://www.toastmasters.org/resources/-/media/fc7df1a49bcf49968e90d07a550e282a.ashx"},"Active Listening":{"level":2,"pathways":["MS","PI","SR","TC"],"url":"https://www.toastmasters.org/resources/-/media/d97ff6e633ad44dbaca0ddac5a6c0fb8.ashx","notes":"Member takes Table Topics Master role — not a prepared speech. Still requires a dedicated PE."},"Effective Body Language":{"level":2,"pathways":["PM"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8203e-evaluation-resource-ffe.pdf"},"Introduction to Toastmasters Mentoring":{"level":2,"pathways":["ALL"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8204e-evaluation-resource-ffe.pdf"},"Managing Time":{"level":2,"pathways":["LD"],"url":"https://www.toastmasters.org/resources/-/media/60d8b49dfbf548faa9be863055a498db.ashx"},"Negotiate the Best Outcome":{"level":3,"pathways":["DL"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8307e-evaluation-resource-ffe.pdf"},"Engage Your Audience with Humor":{"level":3,"pathways":["EH"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8320e-evaluation-resource-ffe.pdf"},"Understanding Emotional Intelligence":{"level":3,"pathways":["MS"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8316e-evaluation-resource-ffe.pdf"},"Understanding Conflict Resolution":{"level":3,"pathways":["PI"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8315e-evaluation-resource-ffe.pdf"},"Persuasive Speaking":{"level":3,"pathways":["PM"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8308e-evaluation-resource-ffe.pdf"},"Develop a Communication Plan":{"level":3,"pathways":["VC"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8303e-evaluation-resource-ffe.pdf"},"Reaching Consensus":{"level":3,"pathways":["EC"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8313e-evaluation-resource-ffe.pdf"},"Present a Proposal":{"level":3,"pathways":["IP"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8312e-evaluation-resource-ffe.pdf"},"Planning and Implementing":{"level":3,"pathways":["LD"],"url":"https://www.toastmasters.org/resources/-/media/2e789337f5374108a9a124a7f8872dee.ashx"},"Make Connections Through Networking":{"level":3,"pathways":["SR"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8306e-evaluation-resource-ffe.pdf"},"Successful Collaboration":{"level":3,"pathways":["TC"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8314e-evaluation-resource-ffe.pdf"},"Manage Change":{"level":4,"pathways":["DL"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8406e-evaluation-resource-ffe.pdf"},"The Power of Humor in an Impromptu Speech":{"level":4,"pathways":["EH"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8415e-evaluation-resource-ffe.pdf"},"Motivate Others":{"level":4,"pathways":["MS","TC"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8411e-evaluation-resource-ffe.pdf"},"Leading in Difficult Situations":{"level":4,"pathways":["PI"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8404e-evaluation-resource-ffe.pdf"},"Managing a Difficult Audience":{"level":4,"pathways":["PM"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8409e-evaluation-resource-ffe.pdf","notes":"Speech length 10–15 mins. Timer: Green=10, Amber=13, Red=15"},"Communicate Change":{"level":4,"pathways":["VC"],"url":"https://www.toastmasters.org/resources/-/media/87df0196dec944ba80ab1451182a02c2.ashx"},"Improvement Through Positive Coaching":{"level":4,"pathways":["EC"],"url":"https://www.toastmasters.org/resources/-/media/7ab9b454f2e9409b8a916c52da520274.ashx"},"Manage Projects Successfully":{"level":4,"pathways":["IP"],"url":"https://www.toastmasters.org/resources/-/media/A6CDC57BC1344D06888B76C5830F4CF2.ashx"},"Leading Your Team":{"level":4,"pathways":["LD"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8405e-evaluation-resource-ffe.pdf"},"Public Relations Strategies":{"level":4,"pathways":["SR"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8412e-evaluation-resource-ffe.pdf"},"Lead in Any Situation":{"level":5,"pathways":["DL","TC"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8504e-evaluation-resource-ffe.pdf"},"Deliver Your Message with Humor":{"level":5,"pathways":["EH"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8512e-evaluation-resource-ffe.pdf"},"Team Building":{"level":5,"pathways":["MS"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8511e-evaluation-resource-ffe.pdf"},"High Performance Leadership":{"level":5,"pathways":["PI","EC","IP"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8503e-evaluation-resource-ffe.pdf","notes":"First speech = plan presentation; final speech = implementation report. Same form for both."},"Prepare to Speak Professionally":{"level":5,"pathways":["PM"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8509e-evaluation-resource-ffe.pdf"},"Develop Your Vision":{"level":5,"pathways":["VC"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8501e-evaluation-resource-ffe.pdf"},"Leading in Your Volunteer Organization":{"level":5,"pathways":["SR"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8505e-evaluation-resource-ffe.pdf"},"Manage Successful Events":{"level":5,"pathways":["LD"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8507e-evaluation-resource-ffe.pdf"},"Reflect on Your Path":{"level":5,"pathways":["ALL"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8510e-evaluation-resource-ffe.pdf","notes":"Required for all pathways at Level 5"},"Advanced Mentoring":{"level":"elective","pathways":["elective"],"url":"https://www.toastmasters.org/resources/-/media/2392E41B75D4415EAA5AE37B4791EA26.ashx"},"Building a Social Media Presence":{"level":"elective","pathways":["elective"],"url":"https://www.toastmasters.org/resources/-/media/37dde033a23f4e75ac113786e840fb8e.ashx"},"Connect with Storytelling":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8300e-evaluation-resource-ffe.pdf"},"Create a Podcast":{"level":"elective","pathways":["elective"],"url":"https://www.toastmasters.org/resources/-/media/c35bea8707c8428ebf760bdf2de6565d.ashx"},"Creating Effective Visual Aids":{"level":"elective","pathways":["elective"],"url":"https://www.toastmasters.org/resources/-/media/d389e83787464044bd66639ef0e8113b.ashx"},"Cross-Cultural Understanding":{"level":"elective","pathways":["elective"],"url":"https://www.toastmasters.org/resources/-/media/c34b6ff1cdb94533a1ad4e809e3bacd6.ashx"},"Deliver Social Speeches":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8302e-evaluation-resource-ffe.pdf"},"Ethical Leadership":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8502e-evaluation-resource-ffe.pdf"},"Focus on the Positive":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8304e-evaluation-resource-ffe.pdf"},"Inspire Your Audience":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8305e-evaluation-resource-ffe.pdf"},"Lessons Learned":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8506e-evaluation-resource-ffe.pdf"},"Manage Online Meetings":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8407e-evaluation-resource-ffe.pdf"},"Mentoring":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8410e-evaluation-resource-ffe.pdf"},"Moderate a Panel Discussion":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8508e-evaluation-resource-ffe.pdf"},"Prepare for an Interview":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8310e-evaluation-resource-ffe.pdf"},"Question-and-Answer Session":{"level":"elective","pathways":["elective"],"url":"https://content.toastmasters.org/image/upload/8413E-evaluation-resource-ff.pdf"},"Researching and Presenting":{"level":"elective","pathways":["elective"],"url":"https://www.toastmasters.org/resources/-/media/4a3f37e2cd0345068d5e3b7718fc7062.ashx"},"Understanding Vocal Variety":{"level":"elective","pathways":["elective"],"url":"https://www.toastmasters.org/resources/-/media/b0725fa9cd6444c899ec03a89e788f4d.ashx"},"Using Descriptive Language":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8318e-evaluation-resource-ffe.pdf"},"Using Presentation Software":{"level":"elective","pathways":["elective"],"url":"https://ccdn.toastmasters.org/medias/files/department-documents/education-documents/evaluation-resources/english/8319e-evaluation-resource-ffe.pdf"},"Write a Compelling Blog":{"level":"elective","pathways":["elective"],"url":"https://www.toastmasters.org/resources/-/media/7CCBD12EB1754A2F910CCEBE96AAAE02.ashx"},"Generic Evaluation Resource":{"level":"generic","pathways":["ANY"],"url":"https://content.toastmasters.org/image/upload/8053-generic-evaluation-resource.pdf","notes":"For any speech inside or outside Pathways"}}};
+
+		const PATHWAY_NAMES = {
+			DL:"Dynamic Leadership", EH:"Engaging Humor", MS:"Motivational Strategies",
+			PI:"Persuasive Influence", PM:"Presentation Mastery", VC:"Visionary Communication",
+			EC:"Effective Coaching", IP:"Innovative Planning", LD:"Leadership Development",
+			SR:"Strategic Relationships", TC:"Team Collaboration"
+		};
+
+		function labelForUrls(key) {
+			const map = {
+				first_speech: "Form 1 — First Speech",
+				second_speech: "Form 2 — Second Speech",
+				evaluator_speech: "Form 3 — Evaluator Speech",
+				evaluation_form: "Evaluation Form",
+				speech_profile: "Speech Profile"
+			};
+			return map[key] || key.replace(/_/g, ' ');
+		}
+
+		function matchesFilters(data, pathway, level) {
+			if (level) {
+				if (level === 'elective') {
+					if (data.level !== 'elective') return false;
+				} else {
+					if (String(data.level) !== level) return false;
+				}
+			}
+			if (pathway) {
+				const pw = data.pathways || [];
+				if (pathway === 'elective') {
+					if (!pw.includes('elective')) return false;
+				} else {
+					if (!pw.includes(pathway) && !pw.includes('ALL')) return false;
+				}
+			}
+			return true;
+		}
+
+		function fuzzyScore(query, name) {
+			const q = query.toLowerCase();
+			const n = name.toLowerCase();
+			if (n.includes(q)) return 1;
+			const words = q.split(/\s+/);
+			const matchedWords = words.filter(w => n.includes(w));
+			return matchedWords.length / words.length * 0.8;
+		}
+
+		function renderCard(name, data) {
+			const level = data.level;
+			const levelStr = typeof level === 'number' ? `Level ${level}` : (level === 'elective' ? 'Elective' : 'Generic');
+			const pathways = (data.pathways || []).filter(p => p !== 'ALL' && p !== 'ANY' && p !== 'elective');
+			const pathwayTags = pathways.map(p => `<span class="tag">${PATHWAY_NAMES[p] || p}</span>`).join('');
+			const allPathways = (data.pathways || []).includes('ALL');
+
+			let links = '';
+			if (data.multi_speech && data.urls) {
+				links = Object.entries(data.urls).map(([k, url]) =>
+					`<a href="${url}" target="_blank" rel="noopener">${labelForUrls(k)}</a>`
+				).join('');
+			} else if (data.url) {
+				links = `<a href="${data.url}" target="_blank" rel="noopener">Download Form</a>`;
+			}
+
+			const noteHtml = data.notes ? `<p class="note">${data.notes}</p>` : '';
+
+			return `
+				<div class="result-card">
+					<h3>${name}</h3>
+					<div class="result-meta">
+						<span class="tag">${levelStr}</span>
+						${allPathways ? '<span class="tag">All Pathways</span>' : pathwayTags}
+					</div>
+					<div class="form-links">${links}</div>
+					${noteHtml}
+				</div>`;
+		}
+
+		function runSearch() {
+			const query = document.getElementById('query').value.trim();
+			const pathway = document.getElementById('filter-pathway').value;
+			const level = document.getElementById('filter-level').value;
+			const resultsEl = document.getElementById('results');
+			const noResultsEl = document.getElementById('no-results');
+			const countEl = document.getElementById('result-count');
+
+			const entries = Object.entries(INDEX.projects);
+			let filtered = entries.filter(([name, data]) => matchesFilters(data, pathway, level));
+
+			let scored;
+			if (query.length >= 2) {
+				scored = filtered
+					.map(([name, data]) => ({ name, data, score: fuzzyScore(query, name) }))
+					.filter(r => r.score > 0)
+					.sort((a, b) => b.score - a.score);
+			} else {
+				scored = filtered.map(([name, data]) => ({ name, data, score: 1 }));
+			}
+
+			if (scored.length === 0) {
+				resultsEl.innerHTML = '';
+				noResultsEl.style.display = 'block';
+				countEl.textContent = '';
+			} else {
+				noResultsEl.style.display = 'none';
+				countEl.textContent = `${scored.length} project${scored.length !== 1 ? 's' : ''} found`;
+				resultsEl.innerHTML = scored.map(r => renderCard(r.name, r.data)).join('');
+			}
+		}
+
+		document.getElementById('query').addEventListener('input', runSearch);
+		document.getElementById('filter-pathway').addEventListener('change', runSearch);
+		document.getElementById('filter-level').addEventListener('change', runSearch);
+
+		// Show all on load
+		runSearch();
+		</script>
+
+	</body>
+</html>
